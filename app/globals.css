@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f0e7;
+  --surface: #fbf8f2;
+  --surface-strong: #ffffff;
+  --ink: #1c2a35;
+  --primary: #1f4d78;
+  --secondary: #5a8e43;
+  --muted: #61707b;
+  --border: #d6ddd8;
+  --accent: #b89b72;
+  --earth: #7a6b58;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-ink: var(--ink);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-earth: var(--earth);
+  --font-sans: var(--font-public-sans);
+  --font-heading: var(--font-source-serif);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(90, 142, 67, 0.11), transparent 34%),
+    radial-gradient(circle at 88% 12%, rgba(31, 77, 120, 0.12), transparent 28%),
+    linear-gradient(180deg, #f6f1e8 0%, #faf7f1 45%, #f3eee5 100%);
+  color: var(--ink);
+  font-family: var(--font-public-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  position: relative;
+  isolation: isolate;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent 18%),
+    radial-gradient(circle at center top, rgba(184, 155, 114, 0.08), transparent 40%);
+  opacity: 0.85;
+  z-index: -1;
+}
+
+* {
+  border-color: var(--border);
+}
+
+img {
+  user-select: none;
+}
+
+::selection {
+  background: rgba(31, 77, 120, 0.18);
+  color: var(--ink);
+}
+
+a,
+button,
+input,
+select,
+textarea,
+details {
+  transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+  transition-duration: 220ms;
+}
+
+.section-wash {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.54)),
+    radial-gradient(circle at top, rgba(90, 142, 67, 0.08), transparent 55%);
+}
+
+.text-shadow-soft {
+  text-shadow: 0 10px 28px rgba(28, 42, 53, 0.06);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-up {
+  animation: fade-up 720ms ease-out both;
+}

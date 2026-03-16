@@ -1,0 +1,27 @@
+<svg width="1400" height="1000" viewBox="0 0 1400 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="1000" rx="72" fill="#F8F5EF"/>
+  <rect x="98" y="92" width="1204" height="816" rx="36" fill="#FDFBF7" stroke="#D7E0E4" stroke-width="12"/>
+  <path d="M174 262H1214" stroke="#D7E0E4" stroke-width="10" stroke-linecap="round"/>
+  <path d="M174 348H1214" stroke="#E7EEEF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M174 430H1214" stroke="#E7EEEF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M174 512H1214" stroke="#E7EEEF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M174 594H1214" stroke="#E7EEEF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M174 676H1214" stroke="#E7EEEF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M236 198C365 289 483 343 615 343C764 343 860 276 1000 181" stroke="#488C6D" stroke-width="16" stroke-linecap="round"/>
+  <path d="M256 207H987" stroke="#1A3F61" stroke-width="12" stroke-linecap="round"/>
+  <path d="M358 207V336" stroke="#1A3F61" stroke-width="10" stroke-linecap="round"/>
+  <path d="M530 207V336" stroke="#1A3F61" stroke-width="10" stroke-linecap="round"/>
+  <path d="M702 207V336" stroke="#1A3F61" stroke-width="10" stroke-linecap="round"/>
+  <path d="M874 207V336" stroke="#1A3F61" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="1038" cy="264" r="138" fill="#E3ECE7"/>
+  <path d="M929 676C1003 603 1058 566 1123 566C1174 566 1218 591 1270 639" stroke="#1A3F61" stroke-width="14" stroke-linecap="round"/>
+  <path d="M944 690H1253" stroke="#1A3F61" stroke-width="12" stroke-linecap="round"/>
+  <path d="M990 690V776" stroke="#1A3F61" stroke-width="10" stroke-linecap="round"/>
+  <path d="M1075 690V788" stroke="#1A3F61" stroke-width="10" stroke-linecap="round"/>
+  <path d="M1160 690V780" stroke="#1A3F61" stroke-width="10" stroke-linecap="round"/>
+  <rect x="198" y="742" width="388" height="78" rx="18" fill="#F1F4F5"/>
+  <rect x="198" y="642" width="264" height="60" rx="18" fill="#E5ECEF"/>
+  <rect x="612" y="642" width="212" height="60" rx="18" fill="#E3ECE7"/>
+  <circle cx="1118" cy="244" r="30" fill="#F4E3B9"/>
+</svg>
+
