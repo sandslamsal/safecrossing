@@ -23,7 +23,7 @@ export default function PeoplePage() {
       <PageHeader
         eyebrow="People"
         title="The people behind Safe Crossing Foundation"
-        description="Meet the founder, future team members, and the advisors or volunteers who can help shape the mission over time."
+        description="Meet the founder, future team members, and the advisors or volunteers who can help shape the mission with care over time."
         imageSrc="/images/mountain-map.svg"
         imageAlt="Placeholder illustration representing connection across mountainous communities"
       />
@@ -38,8 +38,8 @@ export default function PeoplePage() {
         <div className="mx-auto max-w-7xl">
           <SectionTitle
             eyebrow="Founder"
-            title="A bridge engineer building a mission around dignity, access, and practical impact"
-            description="The founder profile is intentionally deeper here so the homepage can stay focused and uncluttered."
+            title="A bridge engineer whose mission began with Nepal"
+            description="The fuller story lives here so donors and partners can understand the bridge motivation behind the foundation without crowding the homepage."
           />
           <div className="mt-10">
             <PersonCard member={founderProfile} featured />
@@ -52,7 +52,7 @@ export default function PeoplePage() {
           <SectionTitle
             eyebrow="Future Team"
             title="Roles the organization is designed to grow into"
-            description="These placeholders show how the site can support future staff additions without needing new layout work each time."
+            description="These placeholders show how future staff can be added cleanly as the organization grows."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {futureTeamMembers.map((member) => (
@@ -67,7 +67,7 @@ export default function PeoplePage() {
           <SectionTitle
             eyebrow="Advisors & Volunteers"
             title="A future network of guidance, expertise, and support"
-            description="Advisors and volunteers can help expand the foundation's technical strength, storytelling, and community responsiveness."
+            description="Advisors and volunteers can help extend the foundation's technical strength, relationships, and responsiveness."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {advisorsAndVolunteers.map((member) => (
@@ -78,8 +78,8 @@ export default function PeoplePage() {
       </section>
 
       <CTABanner
-        title="Help shape the people and partnerships behind the mission."
-        description="Support the foundation as a donor, advisor, volunteer, or future collaborator and help build the team this work deserves."
+        title="Help build the partnerships behind safer crossings."
+        description="Support the foundation as a donor, advisor, volunteer, or future collaborator."
         primaryHref="/get-involved"
         primaryLabel="Get Involved"
         secondaryHref="/contact"

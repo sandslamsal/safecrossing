@@ -23,14 +23,14 @@ export function PersonCard({ member, featured = false }: PersonCardProps) {
         </div>
         <div className="p-7 lg:p-9">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-secondary">{member.category}</p>
-          <h2 className="font-heading mt-4 text-4xl leading-tight tracking-[-0.04em] text-ink sm:text-5xl">{member.name}</h2>
+          <h2 className="font-heading mt-4 text-3xl leading-tight tracking-[-0.04em] text-ink sm:text-[2.9rem]">{member.name}</h2>
           <p className="mt-3 text-sm font-medium uppercase tracking-[0.28em] text-muted">{member.role}</p>
-          <p className="mt-6 text-base leading-8 text-muted">{member.shortBio}</p>
+          <p className="mt-6 max-w-2xl text-base leading-7 text-muted">{member.shortBio}</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {member.fullStory.map((section) => (
               <section key={section.title} className="rounded-[1.5rem] border border-border/70 bg-surface px-5 py-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.26em] text-secondary">{section.title}</p>
-                <p className="mt-3 text-sm leading-7 text-muted">{section.content}</p>
+                <p className="mt-3 text-sm leading-6 text-muted">{section.content}</p>
               </section>
             ))}
           </div>
@@ -52,9 +52,9 @@ export function PersonCard({ member, featured = false }: PersonCardProps) {
       </div>
       <div className="flex grow flex-col p-6">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-secondary">{member.category}</p>
-        <h3 className="font-heading mt-4 text-3xl leading-tight tracking-[-0.03em] text-ink">{member.name}</h3>
+        <h3 className="font-heading mt-4 text-2xl leading-tight tracking-[-0.03em] text-ink sm:text-[2rem]">{member.name}</h3>
         <p className="mt-2 text-sm font-medium uppercase tracking-[0.24em] text-muted">{member.role}</p>
-        <p className="mt-5 text-sm leading-7 text-muted">{member.shortBio}</p>
+        <p className="mt-5 text-sm leading-6 text-muted">{member.shortBio}</p>
 
         {member.fullStory.length ? (
           <details className="mt-6 rounded-[1.4rem] border border-primary/10 bg-primary/5 px-4 py-4">
@@ -63,7 +63,7 @@ export function PersonCard({ member, featured = false }: PersonCardProps) {
               {member.fullStory.map((section) => (
                 <section key={section.title}>
                   <p className="text-xs font-semibold uppercase tracking-[0.24em] text-secondary">{section.title}</p>
-                  <p className="mt-2 text-sm leading-7 text-muted">{section.content}</p>
+                  <p className="mt-2 text-sm leading-6 text-muted">{section.content}</p>
                 </section>
               ))}
             </div>

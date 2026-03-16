@@ -11,10 +11,10 @@ type LogoProps = {
 };
 
 const variantStyles = {
-  nav: "w-[182px] sm:w-[220px]",
-  hero: "w-full max-w-[360px] sm:max-w-[430px]",
-  footer: "w-[190px] sm:w-[228px]",
-  card: "w-full max-w-[320px]"
+  nav: "w-[208px] sm:w-[250px]",
+  hero: "w-full max-w-[420px] sm:max-w-[540px]",
+  footer: "w-[206px] sm:w-[244px]",
+  card: "w-full max-w-[340px]"
 } as const;
 
 function LogoImage({ variant = "nav", className = "", priority = false }: Omit<LogoProps, "asLink">) {

@@ -86,7 +86,7 @@ export type SocialLink = {
 };
 
 export const foundationMissionStatement =
-  "Safe Crossing Foundation turns bridge engineering into life-saving access for children and rural communities who still face dangerous river crossings to reach school, healthcare, and opportunity.";
+  "Safe Crossing Foundation helps children and rural communities turn dangerous river crossings into safe, reliable bridge access, beginning in Nepal.";
 
 export const navigationLinks: NavigationLink[] = [
   { href: "/", label: "Home" },
@@ -99,16 +99,16 @@ export const navigationLinks: NavigationLink[] = [
 
 export const heroHighlights: HeroHighlight[] = [
   {
-    title: "Children's safety first",
-    detail: "We focus on crossings that shape whether children can reach school with confidence or face danger before class even begins."
+    title: "Protect daily journeys",
+    detail: "A safe bridge can change how children, parents, and elders move through each day."
   },
   {
-    title: "Engineering with credibility",
-    detail: "The foundation is informed by professional bridge engineering expertise, practical structural knowledge, and disciplined planning."
+    title: "Grounded in Nepal",
+    detail: "The work begins with the terrain, river risk, and community realities of rural Nepal."
   },
   {
-    title: "Community partnership",
-    detail: "Local leaders, families, and educators help define where support is needed most and how each crossing should endure."
+    title: "Built with discipline",
+    detail: "Projects are shaped through bridge engineering, local partnership, and long-term stewardship."
   }
 ];
 
@@ -130,42 +130,39 @@ export const impactStats: ImpactStat[] = [
   }
 ];
 
-export const whyWeExist = [
-  "In many rural communities, rivers are not just part of the landscape. They are barriers that shape whether children get to school, whether families reach healthcare, and whether daily life feels stable or dangerous.",
-  "Where there is no bridge, people often adapt around fear: waiting for water levels to fall, using improvised paths, or risking crossings that should never be considered normal.",
-  "Safe Crossing Foundation exists to help turn that reality into something better through serious engineering, local partnership, and practical, resilient crossing solutions that communities can trust."
-];
+export const whyWeExist =
+  "In many rural communities, a river is not just part of the landscape. It can decide whether a child reaches school safely, whether a family reaches care in time, and whether daily life feels secure or exposed to risk.";
 
 export const helpPrograms: ProgramCard[] = [
   {
     title: "Build Safe Bridges",
-    description: "Support durable pedestrian bridge solutions designed for steep terrain, seasonal water changes, and the real patterns of daily use.",
+    description: "Plan durable pedestrian crossings for steep terrain, seasonal rivers, and daily community use.",
     icon: "bridge"
   },
   {
-    title: "Support School Access",
-    description: "Help protect the school journey so attendance is shaped by learning and opportunity, not by fear at the riverbank.",
+    title: "Protect School Routes",
+    description: "Reduce the risk children face on the way to class and back home.",
     icon: "school"
   },
   {
-    title: "Partner with Local Communities",
-    description: "Work with community leaders, teachers, families, and local builders so each project reflects lived need and shared ownership.",
+    title: "Partner Locally",
+    description: "Work with families, schools, and community leaders to shape the right crossing.",
     icon: "community"
   },
   {
-    title: "Create Long-Term Resilience",
-    description: "Plan for maintenance, route connections, stewardship, and the long-term systems that keep safe crossings functioning well after construction.",
+    title: "Care for What We Build",
+    description: "Support stewardship, maintenance, and long-term reliability after construction.",
     icon: "resilience"
   }
 ];
 
 export const founderHomepageSummary =
-  "Dr. Sandesh Lamsal is a Nepal-born structural and bridge engineer whose career has been shaped by both technical expertise and a deep awareness of rural access challenges. Growing up in Nepal, he saw how unsafe river crossings could stand between children and school, families and healthcare, and whole communities and opportunity. Safe Crossing Foundation was created to turn that awareness and his bridge engineering experience into practical humanitarian impact.";
+  "Dr. Sandesh Lamsal grew up in Nepal aware of how unsafe river crossings could shape a child's day before school even began. Early inspiration from HELVETAS, along with support connected to his undergraduate bridge thesis, helped him see how engineering could directly improve life in remote communities. After building a professional career in bridge engineering in the United States, he created Safe Crossing Foundation to help turn that belief into safe crossings.";
 
 export const peoplePageIntro = {
-  title: "Meet the people behind the mission",
+  title: "People shaped by a practical humanitarian mission",
   description:
-    "This page is designed to hold the deeper human stories behind Safe Crossing Foundation while keeping the rest of the website clean, focused, and mission-led."
+    "Safe Crossing Foundation is designed to grow with engineers, partners, and community-centered leaders who treat safe access as both a technical and human responsibility."
 };
 
 // Add new people to this array as the organization grows.
@@ -177,27 +174,27 @@ export const teamMembers: TeamMember[] = [
     photo: "/images/person-placeholder.svg",
     photoAlt: "Portrait placeholder for Dr. Sandesh Lamsal",
     shortBio:
-      "Dr. Sandesh Lamsal is a Nepal-born structural and bridge engineer with a Ph.D. in structural engineering and professional bridge engineering experience in the United States.",
+      "Dr. Sandesh Lamsal is a Nepal-born civil and bridge engineer who works in bridge engineering in the United States and founded Safe Crossing Foundation to help communities gain safe river access.",
     fullStory: [
       {
-        title: "Short Biography",
+        title: "Early Inspiration",
         content:
-          "Growing up in Nepal, Sandesh understood early that geography could become danger. In many rural communities, rivers were not scenery alone. They were barriers to school, healthcare, work, and safety."
+          "Growing up in Nepal, Sandesh saw that a river could decide whether a journey felt routine or dangerous. He was especially moved by the example of HELVETAS and the people connected to that bridge work, whose support around his bachelor's thesis helped him see that practical engineering could directly serve remote communities."
       },
       {
-        title: "Background in Structural Engineering",
+        title: "Why Safe Access Matters",
         content:
-          "He pursued structural engineering with a focus on bridge systems, infrastructure, and the responsibilities that come with safe design. That path led to a Ph.D. in structural engineering and a professional bridge engineering career in the United States."
+          "In rural terrain, a bridge is more than a structure. It can steady the walk to school, protect a trip to care, and reduce the quiet fear families carry during monsoon seasons or high water."
       },
       {
-        title: "Motivation for Starting the Foundation",
+        title: "Engineering as Service",
         content:
-          "As his technical experience deepened, so did the question of how engineering could serve communities still living without safe crossings. Safe Crossing Foundation was created to connect lived awareness in Nepal with practical engineering expertise that can help reduce daily risk."
+          "That belief stayed with him as he pursued civil engineering and built a professional career in bridge engineering in the United States. The deeper his technical experience became, the clearer it felt that bridge knowledge could be used in service of places still living with unsafe crossings."
       },
       {
-        title: "Vision for Safe Crossing Foundation",
+        title: "Building Safe Crossing Foundation",
         content:
-          "His vision is to build a credible humanitarian organization that helps communities move from dangerous improvisation to safe, resilient, community-centered access, beginning in Nepal and expanding to other underserved regions over time."
+          "Safe Crossing Foundation was created to turn that conviction into action: credible, community-centered bridge access work that begins in Nepal and is designed to grow with care. The mission is personal, but it is built to serve communities first."
       }
     ]
   },
@@ -290,13 +287,13 @@ export const featuredPilotProject = {
   location: "Rural Nepal | Initial flagship focus",
   status: "Planned" as const,
   summary:
-    "A featured pilot concept centered on a high-risk crossing where schoolchildren and families currently face dangerous river access during parts of the year.",
+    "The featured pilot focuses on a rural Nepal crossing where families and schoolchildren still face water risk because there is no reliable bridge.",
   description:
-    "The pilot bridge initiative is designed as a flagship starting point: combining route assessment, local consultation, engineering review, fundraising, and long-term maintenance planning for a crossing that affects daily school access and community mobility.",
+    "The goal is to pair local consultation, route assessment, engineering review, and fundraising around one practical project that can demonstrate how safe access changes daily life.",
   outcomes: [
-    "Create a safer and more reliable route for children traveling to school.",
-    "Improve year-round access to healthcare, markets, and family support networks.",
-    "Build a community-led stewardship plan alongside the technical work."
+    "Create a safer route for children traveling to school.",
+    "Improve more reliable access across seasons.",
+    "Build a stewardship plan alongside the technical work."
   ],
   image: "/images/project-pilot.svg",
   imageAlt: "Placeholder illustration of a pilot pedestrian bridge concept in a mountain valley"
@@ -304,18 +301,18 @@ export const featuredPilotProject = {
 
 // Update the organization mission and high-level positioning here as the foundation evolves.
 export const aboutStory = {
-  title: "A nonprofit built to turn technical bridge knowledge into humanitarian access",
+  title: "A nonprofit built to turn bridge knowledge into humanitarian access",
   description:
-    "Safe Crossing Foundation was created around a simple conviction: when a river blocks safe passage, the danger should not be accepted as normal. Safe crossings protect more than movement. They protect education, health, dignity, and the confidence to participate in everyday life.",
+    "Safe Crossing Foundation was created around a simple conviction: when a river blocks safe passage, that danger should not be accepted as normal. Safe access changes how communities learn, work, travel, and care for one another.",
   mission:
-    "To help children and rural communities reach school, healthcare, and opportunity safely by supporting resilient, community-centered crossing solutions.",
+    "To help children and rural communities move safely through daily life by supporting resilient, community-centered crossing solutions.",
   vision:
-    "A world where no child has to risk their life to reach a classroom, and where safe rural access is treated as a foundation for equity, dignity, and resilience."
+    "A world where no child has to risk a river to reach opportunity, and where safe rural access is treated as a basic part of human dignity."
 };
 
 export const organizationStory = [
-  "Safe Crossing Foundation begins in Nepal, where mountain terrain and seasonal rivers can place entire communities on the wrong side of opportunity. Over time, the model is intended to support other underserved regions facing similar access challenges.",
-  "The foundation sits at the intersection of humanitarian need and engineering responsibility. We believe that safe passage should be addressed with the same seriousness as any other life-shaping barrier.",
+  "Safe Crossing Foundation begins in Nepal, where mountain terrain and seasonal rivers can leave entire communities on the wrong side of safety and opportunity. Over time, the model is intended to support other underserved regions facing similar access challenges.",
+  "The foundation sits at the intersection of humanitarian need and engineering responsibility. We believe safe passage should be addressed with the same seriousness as any other life-shaping barrier.",
   "Our role is not only to advocate for bridges, but to help build trustworthy processes around them: listening carefully, planning responsibly, partnering locally, and thinking beyond construction toward stewardship."
 ];
 
