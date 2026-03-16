@@ -10,6 +10,7 @@ import {
   donationUses,
   monthlyGivingReasons
 } from "@/data/site-content";
+import { getAssetPath } from "@/lib/asset-path";
 
 export const metadata: Metadata = {
   title: "Donate"
@@ -47,7 +48,7 @@ export default function DonatePage() {
           <div className="overflow-hidden rounded-[2rem] border border-border/70 bg-white/90 p-3 shadow-[0_24px_65px_rgba(31,77,120,0.1)]">
             {/* Placeholder image: replace with future documentary photography or real field imagery tied to donor storytelling. */}
             <Image
-              src="/images/bridge-community.svg"
+              src={getAssetPath("/images/bridge-community.svg")}
               alt="Placeholder illustration showing the promise of safe bridge access for a rural community"
               width={1200}
               height={900}

@@ -4,6 +4,7 @@ import { Public_Sans, Source_Serif_4 } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { foundationMissionStatement } from "@/data/site-content";
+import { getAssetPath } from "@/lib/asset-path";
 
 import "./globals.css";
 
@@ -19,8 +20,10 @@ const sourceSerif = Source_Serif_4({
   display: "swap"
 });
 
+const siteOrigin = "https://sandeshlamsal.com";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.safecrossingfoundation.org"),
+  metadataBase: new URL(siteOrigin),
   title: {
     default: "Safe Crossing Foundation",
     template: "%s | Safe Crossing Foundation"
@@ -29,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Safe Crossing Foundation",
     description: foundationMissionStatement,
-    images: ["/images/safe-crossing-logo.png"]
+    images: [getAssetPath("/images/safe-crossing-logo.png")]
   }
 };
 

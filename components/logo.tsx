@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { getAssetPath } from "@/lib/asset-path";
+
 type LogoProps = {
   variant?: "nav" | "hero" | "footer" | "card";
   className?: string;
@@ -19,7 +21,7 @@ function LogoImage({ variant = "nav", className = "", priority = false }: Omit<L
   return (
     <span className={`inline-flex ${variantStyles[variant]} ${className}`.trim()}>
       <Image
-        src="/images/safe-crossing-logo.png"
+        src={getAssetPath("/images/safe-crossing-logo.png")}
         alt="Safe Crossing Foundation logo depicting two schoolchildren crossing above a river"
         width={1536}
         height={1024}

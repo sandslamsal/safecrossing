@@ -6,6 +6,7 @@ import { PageHeader } from "@/components/page-header";
 import { ProjectsFilter } from "@/components/projects-filter";
 import { SectionTitle } from "@/components/section-title";
 import { featuredPilotProject, projects } from "@/data/site-content";
+import { getAssetPath } from "@/lib/asset-path";
 
 export const metadata: Metadata = {
   title: "Projects"
@@ -43,7 +44,7 @@ export default function ProjectsPage() {
           <div className="overflow-hidden rounded-[1.8rem] border border-border/70 bg-surface p-3">
             {/* Placeholder image: replace with pilot-specific photography, renderings, or site imagery later. */}
             <Image
-              src={featuredPilotProject.image}
+              src={getAssetPath(featuredPilotProject.image)}
               alt={featuredPilotProject.imageAlt}
               width={1200}
               height={900}

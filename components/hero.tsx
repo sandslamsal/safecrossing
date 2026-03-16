@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ButtonLink } from "@/components/button-link";
 import { Logo } from "@/components/logo";
 import { foundationMissionStatement, heroHighlights } from "@/data/site-content";
+import { getAssetPath } from "@/lib/asset-path";
 
 export function Hero() {
   return (
@@ -59,7 +60,7 @@ export function Hero() {
           <div className="relative rounded-[2rem] border border-border/70 bg-white/84 p-3 shadow-[0_28px_70px_rgba(31,77,120,0.14)] backdrop-blur">
             {/* Placeholder image: replace with documentary-style field photography when available. */}
             <Image
-              src="/images/hero-crossing.svg"
+              src={getAssetPath("/images/hero-crossing.svg")}
               alt="Documentary-style placeholder showing children near a dangerous mountain river crossing"
               width={1200}
               height={1100}

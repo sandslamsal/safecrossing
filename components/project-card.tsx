@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import type { Project } from "@/data/site-content";
+import { getAssetPath } from "@/lib/asset-path";
 
 type ProjectCardProps = {
   project: Project;
@@ -17,7 +18,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <article className="group flex h-full flex-col overflow-hidden rounded-[1.85rem] border border-border/70 bg-white/90 shadow-[0_22px_58px_rgba(31,77,120,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_68px_rgba(31,77,120,0.14)]">
       <div className="relative overflow-hidden">
         <Image
-          src={project.image}
+          src={getAssetPath(project.image)}
           alt={project.imageAlt}
           width={1200}
           height={900}

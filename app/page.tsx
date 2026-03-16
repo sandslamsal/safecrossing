@@ -19,6 +19,7 @@ import {
   impactStats,
   whyWeExist
 } from "@/data/site-content";
+import { getAssetPath } from "@/lib/asset-path";
 
 const programIcons = {
   bridge: BridgeIcon,
@@ -51,7 +52,7 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-[2rem] border border-border/70 bg-white/90 p-3 shadow-[0_24px_65px_rgba(31,77,120,0.1)]">
               {/* Placeholder image: replace with documentary-style field photography of a rural community and bridge access. */}
               <Image
-                src="/images/bridge-community.svg"
+                src={getAssetPath("/images/bridge-community.svg")}
                 alt="Placeholder illustration of a rural community connected by a safe pedestrian bridge"
                 width={1200}
                 height={900}
@@ -150,7 +151,7 @@ export default function HomePage() {
           <div className="overflow-hidden rounded-[1.9rem] border border-border/70 bg-surface p-3">
             {/* Placeholder image: replace with pilot bridge renders, site photography, or engineering visuals later. */}
             <Image
-              src={featuredPilotProject.image}
+              src={getAssetPath(featuredPilotProject.image)}
               alt={featuredPilotProject.imageAlt}
               width={1200}
               height={900}

@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { getAssetPath } from "@/lib/asset-path";
+
 type PageHeaderProps = {
   eyebrow: string;
   title: string;
@@ -22,7 +24,7 @@ export function PageHeader({ eyebrow, title, description, imageSrc, imageAlt }: 
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(90,142,67,0.10),transparent_48%)]" />
           {/* Placeholder image: replace with documentary-style photography or project imagery when available. */}
           <Image
-            src={imageSrc}
+            src={getAssetPath(imageSrc)}
             alt={imageAlt}
             width={1200}
             height={900}

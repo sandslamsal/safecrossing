@@ -15,6 +15,7 @@ import {
   teamMembers,
   whySafeCrossingMatters
 } from "@/data/site-content";
+import { getAssetPath } from "@/lib/asset-path";
 
 export const metadata: Metadata = {
   title: "About"
@@ -44,7 +45,7 @@ export default function AboutPage() {
           <div className="overflow-hidden rounded-[2rem] border border-border/70 bg-white/90 p-3 shadow-[0_24px_65px_rgba(31,77,120,0.1)]">
             {/* Placeholder image: replace with documentary-style photography that reflects the organization's real field context. */}
             <Image
-              src="/images/hero-crossing.svg"
+              src={getAssetPath("/images/hero-crossing.svg")}
               alt="Placeholder illustration of children near a dangerous river crossing"
               width={1200}
               height={900}
