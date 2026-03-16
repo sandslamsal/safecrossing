@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
+import { ButtonLink } from "@/components/button-link";
 import { CTABanner } from "@/components/cta-banner";
-import { FounderStory } from "@/components/founder-story";
 import { PageHeader } from "@/components/page-header";
 import { SectionTitle } from "@/components/section-title";
 import {
   aboutStory,
   accessPillars,
   coreValues,
-  founderStoryFull,
+  founderProfile,
   milestones,
   organizationStory,
-  teamMembers,
   whySafeCrossingMatters
 } from "@/data/site-content";
 import { getAssetPath } from "@/lib/asset-path";
@@ -89,9 +88,29 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div id="founder-story">
-        <FounderStory content={founderStoryFull} />
-      </div>
+      <section className="px-6 py-12 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-8 overflow-hidden rounded-[2rem] border border-border/70 bg-white/90 p-8 shadow-[0_24px_60px_rgba(31,77,120,0.08)] lg:grid-cols-[0.38fr_0.62fr] lg:items-center">
+          <div className="overflow-hidden rounded-[1.8rem] border border-border/70 bg-surface p-3">
+            <Image
+              src={getAssetPath(founderProfile.photo)}
+              alt={founderProfile.photoAlt}
+              width={1200}
+              height={1500}
+              className="aspect-[4/5] w-full rounded-[1.5rem] object-cover"
+            />
+          </div>
+          <div>
+            <SectionTitle
+              eyebrow="People"
+              title="Detailed personal stories now live in one dedicated place."
+              description="The founder story, future team profiles, and advisor or volunteer placeholders are now grouped on the People page so the About page can stay more focused on mission, values, and why safe crossing matters."
+            />
+            <div className="mt-8">
+              <ButtonLink href="/people">Meet Our People</ButtonLink>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="px-6 py-12 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.94fr_1.06fr] lg:items-center">
@@ -133,34 +152,6 @@ export default function AboutPage() {
                 <p className="mt-4 text-sm leading-7 text-muted">{milestone.description}</p>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 py-12 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <SectionTitle
-            eyebrow="Team"
-            title="Leadership and team structure ready to grow"
-            description="This homepage-ready team section balances current clarity with room for future advisors, local staff, and program leadership profiles."
-          />
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {teamMembers.map((member) => {
-              const initials = member.name
-                .split(" ")
-                .map((part) => part[0])
-                .join("")
-                .slice(0, 2);
-
-              return (
-                <article key={member.name} className="rounded-[1.8rem] border border-border/70 bg-white/90 p-6 shadow-[0_20px_52px_rgba(31,77,120,0.08)]">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-xl font-semibold text-primary">{initials}</div>
-                  <h3 className="font-heading mt-5 text-3xl leading-tight tracking-[-0.03em] text-ink">{member.name}</h3>
-                  <p className="mt-2 text-sm font-medium uppercase tracking-[0.24em] text-secondary">{member.role}</p>
-                  <p className="mt-4 text-sm leading-7 text-muted">{member.bio}</p>
-                </article>
-              );
-            })}
           </div>
         </div>
       </section>

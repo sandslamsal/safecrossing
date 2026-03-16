@@ -1,5 +1,6 @@
 export type ProjectStatus = "Planned" | "In Progress" | "Completed";
 export type ProjectFilter = "All" | ProjectStatus;
+export type PersonCategory = "Founder" | "Future Team" | "Advisors & Volunteers";
 
 export type NavigationLink = {
   href: string;
@@ -23,19 +24,19 @@ export type ProgramCard = {
   icon: "bridge" | "school" | "community" | "resilience";
 };
 
-export type FounderJourneyStep = {
+export type StorySection = {
   title: string;
-  description: string;
+  content: string;
 };
 
-export type FounderStoryContent = {
-  eyebrow: string;
-  title: string;
-  intro: string;
-  paragraphs: string[];
-  quote: string;
-  credentials: string[];
-  journey: FounderJourneyStep[];
+export type TeamMember = {
+  name: string;
+  role: string;
+  category: PersonCategory;
+  photo: string;
+  photoAlt: string;
+  shortBio: string;
+  fullStory: StorySection[];
 };
 
 export type Project = {
@@ -74,12 +75,6 @@ export type Milestone = {
   description: string;
 };
 
-export type TeamMember = {
-  name: string;
-  role: string;
-  bio: string;
-};
-
 export type FAQItem = {
   question: string;
   answer: string;
@@ -97,6 +92,7 @@ export const navigationLinks: NavigationLink[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
+  { href: "/people", label: "People" },
   { href: "/get-involved", label: "Get Involved" },
   { href: "/contact", label: "Contact" }
 ];
@@ -163,65 +159,131 @@ export const helpPrograms: ProgramCard[] = [
   }
 ];
 
-// Update founder story text here when you are ready for final approved biography copy.
-export const founderStoryPreview: FounderStoryContent = {
-  eyebrow: "Founder's Story",
-  title: "From childhood awareness in Nepal to a bridge engineering career dedicated to safer access",
-  intro:
-    "Dr. Sandesh Lamsal founded Safe Crossing Foundation to connect lived awareness of rural access challenges with the technical discipline required to solve them responsibly.",
-  paragraphs: [
-    "Growing up in Nepal, Sandesh saw how geography could become danger. In many rural communities, rivers were not scenery; they were barriers to school, healthcare, work, and safety.",
-    "That awareness stayed with him through structural engineering study, a Ph.D. in structural engineering, and a professional career in bridge engineering in the United States. Safe Crossing Foundation was created to turn that expertise into impact for communities still living without safe bridge access."
-  ],
-  quote: "Safe crossing is not only about infrastructure. It is about dignity, education, healthcare, and opportunity.",
-  credentials: [
-    "Nepal-born structural and bridge engineer",
-    "Ph.D. in structural engineering",
-    "Professional bridge engineering experience in the United States",
-    "Focused on practical, resilient, community-centered access"
-  ],
-  journey: [
-    {
-      title: "Nepal childhood awareness",
-      description: "Early understanding of how rivers can isolate rural families from school, care, and daily security."
-    },
-    {
-      title: "Engineering education",
-      description: "Advanced study centered on structural systems, bridge behavior, and the responsibility of safe design."
-    },
-    {
-      title: "Bridge engineering career",
-      description: "Professional experience in the United States shaped by structural design, infrastructure, and bridge systems."
-    },
-    {
-      title: "Launching the foundation",
-      description: "A commitment to bring technical knowledge back into humanitarian service, beginning in Nepal."
-    }
-  ]
+export const founderHomepageSummary =
+  "Dr. Sandesh Lamsal is a Nepal-born structural and bridge engineer whose career has been shaped by both technical expertise and a deep awareness of rural access challenges. Growing up in Nepal, he saw how unsafe river crossings could stand between children and school, families and healthcare, and whole communities and opportunity. Safe Crossing Foundation was created to turn that awareness and his bridge engineering experience into practical humanitarian impact.";
+
+export const peoplePageIntro = {
+  title: "Meet the people behind the mission",
+  description:
+    "This page is designed to hold the deeper human stories behind Safe Crossing Foundation while keeping the rest of the website clean, focused, and mission-led."
 };
 
-// Update founder story text here when you are ready for the full public-facing About page biography.
-export const founderStoryFull: FounderStoryContent = {
-  eyebrow: "Founder's Story",
-  title: "A mission shaped by Nepal, engineering, and the belief that safe passage is a basic form of dignity",
-  intro:
-    "Dr. Sandesh Lamsal did not start Safe Crossing Foundation to center his own story. He started it because too many children and families still live with a crossing problem that engineering can help solve.",
-  paragraphs: [
-    "Growing up in Nepal, Sandesh understood early that rivers could define the limits of everyday life. In many rural communities, crossing safely was not guaranteed. A route to school, a trip to a health post, or a visit to family could depend on water levels, improvised paths, or dangerous cable crossings.",
-    "As he pursued structural engineering, he became convinced that infrastructure is never only technical. The presence or absence of a bridge shapes who can learn consistently, who can seek care on time, and who gets to move through daily life with confidence instead of fear.",
-    "He went on to earn a Ph.D. in structural engineering and build a professional career in bridge engineering in the United States, gaining deep experience in structural design, bridge systems, and infrastructure. That path gave him technical tools, but it also sharpened a personal question: how could that knowledge serve communities still living without safe access?",
-    "Safe Crossing Foundation is the answer taking form. Beginning with Nepal and designed to grow toward other underserved regions over time, the foundation exists to transform engineering expertise into real humanitarian impact through safer, resilient crossings built with community trust and long-term care."
-  ],
-  quote: "Safe access is not a luxury. It is a condition for education, healthcare, dignity, and opportunity.",
-  credentials: [
-    "Originally from Nepal",
-    "Structural and bridge engineer",
-    "Ph.D. in structural engineering",
-    "U.S.-based bridge engineering professional",
-    "Committed to community-centered humanitarian infrastructure"
-  ],
-  journey: founderStoryPreview.journey
-};
+// Add new people to this array as the organization grows.
+export const teamMembers: TeamMember[] = [
+  {
+    name: "Dr. Sandesh Lamsal",
+    role: "Founder",
+    category: "Founder",
+    photo: "/images/person-placeholder.svg",
+    photoAlt: "Portrait placeholder for Dr. Sandesh Lamsal",
+    shortBio:
+      "Dr. Sandesh Lamsal is a Nepal-born structural and bridge engineer with a Ph.D. in structural engineering and professional bridge engineering experience in the United States.",
+    fullStory: [
+      {
+        title: "Short Biography",
+        content:
+          "Growing up in Nepal, Sandesh understood early that geography could become danger. In many rural communities, rivers were not scenery alone. They were barriers to school, healthcare, work, and safety."
+      },
+      {
+        title: "Background in Structural Engineering",
+        content:
+          "He pursued structural engineering with a focus on bridge systems, infrastructure, and the responsibilities that come with safe design. That path led to a Ph.D. in structural engineering and a professional bridge engineering career in the United States."
+      },
+      {
+        title: "Motivation for Starting the Foundation",
+        content:
+          "As his technical experience deepened, so did the question of how engineering could serve communities still living without safe crossings. Safe Crossing Foundation was created to connect lived awareness in Nepal with practical engineering expertise that can help reduce daily risk."
+      },
+      {
+        title: "Vision for Safe Crossing Foundation",
+        content:
+          "His vision is to build a credible humanitarian organization that helps communities move from dangerous improvisation to safe, resilient, community-centered access, beginning in Nepal and expanding to other underserved regions over time."
+      }
+    ]
+  },
+  {
+    name: "Nepal Program Lead",
+    role: "Future Team Member",
+    category: "Future Team",
+    photo: "/images/person-placeholder.svg",
+    photoAlt: "Portrait placeholder for a future Nepal program lead",
+    shortBio:
+      "This future role will help coordinate local relationships, community communication, and project follow-through in Nepal.",
+    fullStory: [
+      {
+        title: "Role in the Organization",
+        content:
+          "A Nepal-based program lead can help ensure the foundation's work stays responsive to local context, field realities, and community trust."
+      }
+    ]
+  },
+  {
+    name: "Engineering Advisor",
+    role: "Future Team Member",
+    category: "Future Team",
+    photo: "/images/person-placeholder.svg",
+    photoAlt: "Portrait placeholder for a future engineering advisor",
+    shortBio:
+      "This future role will support technical review, concept development, and resilient bridge planning as projects mature.",
+    fullStory: [
+      {
+        title: "Technical Support",
+        content:
+          "This role is intended for a professional who can help translate field needs into careful engineering review and practical project guidance."
+      }
+    ]
+  },
+  {
+    name: "Partnerships Director",
+    role: "Future Team Member",
+    category: "Future Team",
+    photo: "/images/person-placeholder.svg",
+    photoAlt: "Portrait placeholder for a future partnerships director",
+    shortBio:
+      "This future role will strengthen donor stewardship, partnership development, and long-term supporter communication.",
+    fullStory: [
+      {
+        title: "Partnership Development",
+        content:
+          "As the foundation grows, this role can help connect funders, institutions, and aligned collaborators to specific projects and strategic needs."
+      }
+    ]
+  },
+  {
+    name: "Community Advisory Volunteer",
+    role: "Advisor / Volunteer",
+    category: "Advisors & Volunteers",
+    photo: "/images/person-placeholder.svg",
+    photoAlt: "Portrait placeholder for a future community advisory volunteer",
+    shortBio:
+      "Future advisory volunteers may help the foundation understand local priorities, cultural context, and the everyday realities that shape safe crossing decisions.",
+    fullStory: [
+      {
+        title: "Why Advisors Matter",
+        content:
+          "Trusted advisors can help keep the work grounded in real community needs rather than assumptions made from a distance."
+      }
+    ]
+  },
+  {
+    name: "Skilled Volunteer Network",
+    role: "Advisors / Volunteers",
+    category: "Advisors & Volunteers",
+    photo: "/images/person-placeholder.svg",
+    photoAlt: "Portrait placeholder for future skilled volunteers",
+    shortBio:
+      "Future volunteers may contribute research, communications, design, fundraising, and technical support to help the organization grow responsibly.",
+    fullStory: [
+      {
+        title: "How Volunteers Can Help",
+        content:
+          "A skilled volunteer network can expand the foundation's capacity while preserving a clear focus on mission, clarity, and accountability."
+      }
+    ]
+  }
+];
+
+export const founderProfile = teamMembers.find((member) => member.category === "Founder")!;
 
 export const featuredPilotProject = {
   name: "Nepal Pilot Bridge Initiative",
@@ -320,29 +382,6 @@ export const milestones: Milestone[] = [
     year: "Future",
     title: "Replication and growth",
     description: "Longer-term expansion toward more crossings in Nepal and eventually other underserved regions."
-  }
-];
-
-export const teamMembers: TeamMember[] = [
-  {
-    name: "Dr. Sandesh Lamsal",
-    role: "Founder",
-    bio: "Nepal-born structural and bridge engineer building the foundation's mission around credible engineering, child safety, and community-centered access."
-  },
-  {
-    name: "Technical Advisor Role",
-    role: "Team Placeholder",
-    bio: "Future advisor profile for bridge review, structural guidance, and resilient infrastructure planning."
-  },
-  {
-    name: "Nepal Program Role",
-    role: "Team Placeholder",
-    bio: "Future local leadership profile for community coordination, project communication, and field support."
-  },
-  {
-    name: "Partnerships Role",
-    role: "Team Placeholder",
-    bio: "Future role for donor relations, institutional partnerships, and long-term supporter stewardship."
   }
 ];
 

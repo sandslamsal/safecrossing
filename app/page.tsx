@@ -8,15 +8,15 @@ import {
 } from "@/components/icons";
 import { ButtonLink } from "@/components/button-link";
 import { CTABanner } from "@/components/cta-banner";
-import { FounderStory } from "@/components/founder-story";
 import { Hero } from "@/components/hero";
 import { ImpactStats } from "@/components/impact-stats";
 import { SectionTitle } from "@/components/section-title";
 import {
   featuredPilotProject,
-  founderStoryPreview,
+  founderHomepageSummary,
   helpPrograms,
   impactStats,
+  founderProfile,
   whyWeExist
 } from "@/data/site-content";
 import { getAssetPath } from "@/lib/asset-path";
@@ -120,7 +120,31 @@ export default function HomePage() {
         </div>
       </section>
 
-      <FounderStory content={founderStoryPreview} compact showCta />
+      <section className="px-6 py-16 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-8 overflow-hidden rounded-[2.1rem] border border-border/70 bg-white/90 p-8 shadow-[0_28px_70px_rgba(31,77,120,0.1)] lg:grid-cols-[0.36fr_0.64fr] lg:items-center lg:p-10">
+          <div className="overflow-hidden rounded-[1.8rem] border border-border/70 bg-surface p-3">
+            <Image
+              src={getAssetPath(founderProfile.photo)}
+              alt={founderProfile.photoAlt}
+              width={1200}
+              height={1500}
+              className="aspect-[4/5] w-full rounded-[1.5rem] object-cover"
+            />
+          </div>
+          <div>
+            <SectionTitle
+              eyebrow="Our Founder"
+              title="Dr. Sandesh Lamsal started the foundation to turn engineering expertise into safer daily life."
+              description={founderHomepageSummary}
+            />
+            <div className="mt-8">
+              <ButtonLink href="/people#founder" variant="secondary">
+                Read the Full Story
+              </ButtonLink>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="px-6 py-16 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 overflow-hidden rounded-[2.2rem] border border-border/70 bg-white/90 p-8 shadow-[0_28px_70px_rgba(31,77,120,0.1)] lg:grid-cols-[1.03fr_0.97fr] lg:items-center lg:p-10">
