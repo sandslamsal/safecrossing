@@ -2,11 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 import { CTABanner } from "@/components/cta-banner";
-import { DonationCard } from "@/components/donation-card";
 import { PageHeader } from "@/components/page-header";
 import { SectionTitle } from "@/components/section-title";
 import {
-  donationTiers,
   donationUses,
   monthlyGivingReasons
 } from "@/data/site-content";
@@ -22,26 +20,10 @@ export default function DonatePage() {
       <PageHeader
         eyebrow="Donate"
         title="Give so children and communities can cross with safety instead of fear."
-        description="Support safer access with language that is emotional, credible, and grounded in practical work rather than exaggeration. Every gift helps strengthen the path from danger toward reliable movement."
+        description="Every gift helps support the listening, planning, engineering, and long-term care required to turn a dangerous crossing into safer daily life."
         imageSrc="/images/hero-crossing.svg"
         imageAlt="Placeholder illustration of a child-focused river crossing landscape"
       />
-
-      <section className="px-6 py-12 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <SectionTitle
-            eyebrow="Giving Levels"
-            title="Sample donation tiers for a launch-ready nonprofit donation page"
-            description="These tiers can later connect to Stripe, PayPal, or another nonprofit fundraising platform without changing the overall design."
-            align="center"
-          />
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {donationTiers.map((tier) => (
-              <DonationCard key={`${tier.amount}-${tier.title}`} tier={tier} />
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="px-6 py-12 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.98fr_1.02fr] lg:items-center">
